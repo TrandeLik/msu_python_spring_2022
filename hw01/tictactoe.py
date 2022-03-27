@@ -2,6 +2,7 @@
 This module implements tictactoe game for 2 players
 Valid input to occupy a cell - integer in range [0, 8]
 """
+import copy
 
 
 class TicTacGame:
@@ -100,6 +101,10 @@ class TicTacGame:
             if cell == '-':
                 return 'in progress'
         return 'Draw'
+
+    def get_field(self):
+        """Getter for field"""
+        return copy.copy(self._field)
 
 
 if __name__ == "__main__":
