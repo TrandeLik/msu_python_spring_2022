@@ -46,5 +46,11 @@ class CustomList(list):
     def __le__(self, other):
         return sum(self) <= sum(other)
 
+    def __eq__(self, other):
+        return sum(self) == sum(other)
+
+    def __ne__(self, other):
+        return sum(self) != sum(other)
+
     def __str__(self):
         return super().__str__() + ' sum ' + str(sum(self))
