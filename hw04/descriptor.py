@@ -16,6 +16,8 @@ class Integer:
     def __set__(self, obj, val):
         if isinstance(val, int):
             self.value = val
+        else:
+            raise ValueError
 
 
 class PositiveInteger:
@@ -31,6 +33,8 @@ class PositiveInteger:
     def __set__(self, obj, val):
         if isinstance(val, int) and val >= 0:
             self.value = val
+        else:
+            raise ValueError
 
 
 class String:
@@ -46,3 +50,5 @@ class String:
     def __set__(self, obj, val):
         if isinstance(val, str):
             self.value = val
+        else:
+            raise ValueError

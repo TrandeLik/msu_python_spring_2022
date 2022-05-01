@@ -40,13 +40,16 @@ class TestInteger(unittest.TestCase):
         """
         Non-correct assignment
         """
-        self.instance.int_val = "not int"
+        with self.assertRaises(ValueError):
+            self.instance.int_val = "not int"
         self.assertEqual(0, self.instance.int_val)
         self.instance.int_val = 10
         self.assertEqual(10, self.instance.int_val)
-        self.instance.int_val = {}
+        with self.assertRaises(ValueError):
+            self.instance.int_val = {}
         self.assertEqual(10, self.instance.int_val)
-        self.instance.int_val = 1.2
+        with self.assertRaises(ValueError):
+            self.instance.int_val = 1.2
         self.assertEqual(10, self.instance.int_val)
 
 
@@ -82,15 +85,19 @@ class TestPositiveInteger(unittest.TestCase):
         """
         Non-correct assignment
         """
-        self.instance.uint_val = "also not int"
+        with self.assertRaises(ValueError):
+            self.instance.uint_val = "also not int"
         self.assertEqual(0, self.instance.uint_val)
         self.instance.uint_val = 10
         self.assertEqual(10, self.instance.uint_val)
-        self.instance.uint_val = {}
+        with self.assertRaises(ValueError):
+            self.instance.uint_val = {}
         self.assertEqual(10, self.instance.uint_val)
-        self.instance.uint_val = -1
+        with self.assertRaises(ValueError):
+            self.instance.uint_val = -1
         self.assertEqual(10, self.instance.uint_val)
-        self.instance.uint_val = 1.2
+        with self.assertRaises(ValueError):
+            self.instance.uint_val = 1.2
         self.assertEqual(10, self.instance.uint_val)
 
 
@@ -109,7 +116,7 @@ class TestString(unittest.TestCase):
             str_val = String()
 
             def __init__(self):
-                self.str_val = 0
+                self.str_val = ""
 
         self.instance = Data()
 
@@ -126,13 +133,16 @@ class TestString(unittest.TestCase):
         """
         Non-correct assignment
         """
-        self.instance.str_val = 100
+        with self.assertRaises(ValueError):
+            self.instance.str_val = 100
         self.assertEqual("", self.instance.str_val)
         self.instance.str_val = "it is string"
         self.assertEqual("it is string", self.instance.str_val)
-        self.instance.str_val = {}
+        with self.assertRaises(ValueError):
+            self.instance.str_val = {}
         self.assertEqual("it is string", self.instance.str_val)
-        self.instance.str_val = 1.2
+        with self.assertRaises(ValueError):
+            self.instance.str_val = 1.2
         self.assertEqual("it is string", self.instance.str_val)
 
 
