@@ -1,0 +1,30 @@
+2022-05-15 16:08:41,537	file_logger	INFO	LRUCache with capacity 2 initialization
+2022-05-15 16:08:41,537	file_logger	INFO	Adding a new element with key k1 and value 0
+2022-05-15 16:08:41,537	file_logger	INFO	Update priority for element with key k1. It's new priority: 0
+2022-05-15 16:08:41,537	file_logger	INFO	Set new value 1 to element with key k1
+2022-05-15 16:08:41,537	file_logger	INFO	Update priority for element with key k1. It's new priority: 1
+2022-05-15 16:08:41,537	file_logger	INFO	Update priority for element with key k1. It's new priority: 2
+2022-05-15 16:08:41,537	file_logger	INFO	Successfully got element with key k1
+2022-05-15 16:08:41,537	file_logger	INFO	Adding a new element with key k2 and value 2
+2022-05-15 16:08:41,537	file_logger	INFO	Update priority for element with key k2. It's new priority: 3
+2022-05-15 16:08:41,537	file_logger	INFO	Deleting least recently used element (key = k1)
+2022-05-15 16:08:41,537	file_logger	INFO	Adding a new element with key k3 and value 3
+2022-05-15 16:08:41,537	file_logger	INFO	Update priority for element with key k3. It's new priority: 4
+2022-05-15 16:08:41,537	file_logger	WARNING	This cache hasn't element with key k1
+2022-05-15 16:08:41,538	file_logger	INFO	Update priority for element with key k2. It's new priority: 5
+2022-05-15 16:08:41,538	file_logger	INFO	Successfully got element with key k2
+2022-05-15 16:08:41,538	file_logger	INFO	Update priority for element with key k3. It's new priority: 6
+2022-05-15 16:08:41,538	file_logger	INFO	Successfully got element with key k3
+2022-05-15 16:08:41,538	file_logger	INFO	Deleting least recently used element (key = k2)
+2022-05-15 16:08:41,538	file_logger	INFO	Adding a new element with key k1 and value 4
+2022-05-15 16:08:41,538	file_logger	INFO	Update priority for element with key k1. It's new priority: 7
+2022-05-15 16:08:41,538	file_logger	INFO	Update priority for element with key k1. It's new priority: 8
+2022-05-15 16:08:41,538	file_logger	INFO	Successfully got element with key k1
+2022-05-15 16:08:41,538	file_logger	WARNING	This cache hasn't element with key k2
+2022-05-15 16:08:41,538	file_logger	INFO	Update priority for element with key k3. It's new priority: 9
+2022-05-15 16:08:41,538	file_logger	INFO	Successfully got element with key k3
+2022-05-15 16:08:41,538	file_logger	INFO	LRUCache with capacity -1 initialization
+2022-05-15 16:08:41,538	file_logger	ERROR	Using cache with negative capacity
+2022-05-15 16:08:41,538	file_logger	ERROR	Using cache with negative capacity
+2022-05-15 16:08:41,538	file_logger	ERROR	Using cache with negative capacity
+2022-05-15 16:08:41,538	file_logger	WARNING	This cache hasn't element with key k1
