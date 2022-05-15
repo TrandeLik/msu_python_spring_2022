@@ -1,3 +1,7 @@
+"""
+Memory profiling with LRUCache
+"""
+
 import random
 import weakref
 from memory_profiler import profile
@@ -6,16 +10,28 @@ from hw05.LRUCache import LRUCache
 
 
 class Student:
+    """
+    Simple student class
+    """
     def __init__(self, name="Ivan", age=20, gpa=3.0):
+        """
+        Student's initialization
+        """
         self.name = name
         self.age = age
         self.gpa = gpa
 
 
 class StudentSlot:
+    """
+    Student class with slots
+    """
     __slots__ = ("name", "age", "gpa")
 
     def __init__(self, name="Ivan", age=20, gpa=3.0):
+        """
+        Student initialization
+        """
         self.name = name
         self.age = age
         self.gpa = gpa
@@ -23,6 +39,9 @@ class StudentSlot:
 
 @profile
 def add_simple_students():
+    """
+    Add simple students to LRUCache
+    """
     faker = Faker()
     cache = LRUCache(10000)
     for i in range(20000):
@@ -35,6 +54,9 @@ def add_simple_students():
 
 @profile
 def add_slots_students():
+    """
+    Add students with slots to LRUCache
+    """
     faker = Faker()
     cache = LRUCache(10000)
     for i in range(20000):
@@ -47,6 +69,9 @@ def add_slots_students():
 
 @profile
 def add_weakref_students():
+    """
+    Add weakrefs on students to LRUCache
+    """
     faker = Faker()
     cache = LRUCache(10000)
     for i in range(20000):
